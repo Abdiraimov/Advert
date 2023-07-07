@@ -40,6 +40,14 @@ class _AddProductState extends State<AddProduct> {
             ),
             AppSizes.height10,
             CustomTextField(
+              prefixIcon: Center(
+                  child: IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.camera_alt))),
+              controller: _description,
+              maxLines: 5,
+            ),
+            AppSizes.height10,
+            CustomTextField(
               hintText: 'name',
               controller: _name,
             ),
@@ -47,11 +55,10 @@ class _AddProductState extends State<AddProduct> {
             CustomTextField(
               hintText: 'dateTime',
               controller: _dateTime,
-              onTap: () async{
+              onTap: () async {
                 await DateTimeService.showDateTimePicker(context, (value) {
                   _dateTime.text = value.toString();
-                 }
-                 );
+                });
               },
             ),
             AppSizes.height10,
@@ -70,5 +77,3 @@ class _AddProductState extends State<AddProduct> {
     );
   }
 }
-
-
