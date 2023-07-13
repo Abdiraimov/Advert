@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DateTimeService {
-  static Future<void> showDateTimePicker(BuildContext context,
-  void Function(DateTime) onDateTimeChanged){
+  Future<void> showDateTimePicker(
+      BuildContext context, void Function(DateTime) onDateTimeChanged) {
     return showCupertinoModalPopup(
         context: context,
         builder: (BuildContext builder) {

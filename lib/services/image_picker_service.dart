@@ -4,7 +4,7 @@ class ImagePickerService {
   final ImagePicker _picker = ImagePicker();
 
   Future<List<XFile>?> pickImages() async {
-    final images = await _picker.pickMultiImage(imageQuality: 5);
+    final images = await _picker.pickMultiImage(imageQuality: 1);
     return images;
   }
 }
